@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrio - Contact Us</title>
+
+    <link rel="stylesheet" href="loader.css" />
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <script src="loading.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script
+      src="http://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="contactScript.js"></script>
+    <style>
+      * {
+        outline-color: cyan;
+        font-family: "Roboto", sans-serif;
+      }
+      body {
+        background-image: url(bg_image1.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      .contactForm {
+        transform: translate(-50%, -50%, -50%, -50%);
+        font-size: 1.5em;
+        color: cyan;
+        background-color: rgb(0, 0, 0);
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+      }
+
+      #contactSubmit {
+        color: cyan;
+        background-color: black;
+        text-align: center;
+        font-size: large;
+        width: 100.5%;
+        max-width: 100.5%;
+        border-radius: 200rem;
+        cursor: pointer;
+        border-color: cyan;
+      }
+      #contactReset {
+        color: cyan;
+        margin-top: 1rem;
+        text-align: center;
+        background-color: black;
+        font-size: large;
+        width: 100.5%;
+        max-width: 100.5%;
+        cursor: pointer;
+        border-radius: 200rem;
+        border-color: cyan;
+      }
+      #contactSubmit:hover,
+      #contactReset:hover, 
+      #contactSubmit:focus,
+      #contactReset:focus {
+        background-color: cyan;
+        color: #000;
+        transition: ease 0.5s;
+      }
+      .contactForm input {
+        width: 100%;
+        max-width: 100%;
+        color: cyan;
+        caret-color: cyan;
+      }
+      #Issue {
+        margin-top: 0.3%;
+        resize: none;
+        width: 100%;
+        max-width: 100%;
+        background: #000;
+        color: cyan;
+        text-overflow: ellipsis;
+        box-shadow: inset -0.313rem -0.313rem 0.625rem #09abc075,
+          inset 0.313rem 0.313rem 0.438rem rgba(0, 255, 255, 0.688);
+        font-size: large;
+      }
+      #Issue::placeholder {
+        color: cyan;
+        font-size: large;
+        padding-left: 1rem;
+        padding-top: 1rem;
+      }
+      #errorText{
+        color: cyan;
+      }
+      #errorMessage {
+        margin-bottom: 1.25rem;
+        padding: 0;
+        background: rgb(245, 32, 32);
+        border-radius: 100rem;
+        text-align: center;
+        font-size: large;
+        transition: all 0.6s ease;
+      }
+      #errorRemove{
+        float: right;
+        display: none;
+        margin-top: -2.7rem;
+        margin-right: .5rem;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        color: cyan;
+        background: transparent;
+      }
+      #Name,
+      #Email {
+        font-size: large;
+        background: #000;
+        box-shadow: inset -0.313rem -0.313rem 0.625rem #09abc075,
+          inset 0.313rem 0.313rem 0.438rem rgba(0, 255, 255, 0.388);
+      }
+      #Name::placeholder,
+      #Email::placeholder {
+        color: cyan;
+        padding-left: 1rem;
+      }
+      #ContactButton {
+        background-color: cyan;
+        color: #000;
+      }
+      #Name {
+        text-transform: capitalize;
+      }
+      form {
+        margin-top: 1%;
+        opacity: 92%;
+      }
+      #nav {
+        opacity: 86%;
+        position: sticky;
+        top: 3px;
+        z-index: 10;
+      }
+    </style>
+    <script>
+      $(function () {
+          var includes = $('[data-include]')
+          $.each(includes, function () {
+            var file =  $(this).data('include') + '.html'
+            $(this).load(file)
+          })
+        })
+    </script>
+    <link
+      rel="shortcut icon"
+      href="carrio_logo1.png"
+      type="image/x-icon"
+      sizes="16x16"
+      type="image/png"
+    />
+  </head>
+  <body onload="loaded()">
+    <div id="nav" data-include="navBar"></div>
+    <div class="loader hidden">
+      <img src="loading_image.gif" alt="Loading..." />
+    </div>
+
+    <form
+      onsubmit="return submition()"
+      class="contactForm"
+      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScQuTgSeSb42wCyGMpuPYZZSTP315Vt79GlF9Y6AiAnptaruA/formResponse"
+      target="_self"
+      method="POST"
+      id="mG61Hd"
+      jsmodel="TOfxwf Q91hve"
+      data-response="%.@.[]]"
+      data-first-entry="0"
+      data-last-entry="3"
+      data-is-first-page="true"
+      autocomplete="off"
+    >
+      <div id="errorMessage"><p id="errorText"></p></div>
+      <!-- <button id="errorRemove"><i class="fa fa-times fa-2x"></i></button> -->
+      <div>
+        <label for="Name"></label>
+        <input
+          type="text"
+          id="Name"
+          name="entry.1827345078"
+          placeholder="Name"
+        /><br /><br />
+      </div>
+
+      <div>
+        <label for="Email"></label>
+        <input
+          type="email"
+          id="Email"
+          name="entry.711313523"
+          placeholder="Email"
+        /><br /><br />
+      </div>
+
+      <div>
+        <textarea
+          name="entry.249034318"
+          id="Issue"
+          cols="181"
+          rows="10"
+          placeholder="Describe your issue"
+          autocomplete="off"
+        ></textarea>
+      </div>
+      <div>
+        <input type="reset" id="contactReset" />
+      </div>
+      <div>
+        <input type="submit" id="contactSubmit" />
+      </div>
+    </form>
+  </body>
+</html>
